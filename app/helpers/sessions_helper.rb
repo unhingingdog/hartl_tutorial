@@ -26,7 +26,7 @@ module SessionsHelper
 
   #returns true if the given user is the logged in user
   def current_user?(user)
-    user == @current_user
+    user == current_user
   end
 
 
@@ -59,4 +59,5 @@ module SessionsHelper
     redirect_to(session[:forwarding_url] || default)
     session.delete(:forwarding_url)
   end
+
 end
