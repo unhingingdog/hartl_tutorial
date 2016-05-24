@@ -2,12 +2,12 @@
   <div class="container">
     <%= link_to "sample app", root_path, id: "logo"  %>
     <nav>
-      <ul class="navbar-right">
-        <li><%= link_to "Home |",   root_path %></li>
-        <li><%= link_to " Help ",  help_path %></li>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="navlist"><%= link_to "Home",   root_path %></li>
+        <li class="navlist"><%= link_to " Help",  help_path %></li>
         <% if logged_in? %>
-          <li><%= link_to "| Users", users_path %></li>
-          <li class="dropdown">
+          <li class="navlist"><%= link_to "Users", users_path %></li>
+          <li class="dropdown navlist">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
             </a>
